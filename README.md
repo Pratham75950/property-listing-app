@@ -21,8 +21,8 @@ This is a sample property listing mobile app built using **Expo**, **TypeScript*
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/your-username/my-rental-app.git
-cd my-rental-app
+git clone https://github.com/Pratham75950/property-listing-app
+cd property-listing-app
 
  1. Clone the repo
 npm install
