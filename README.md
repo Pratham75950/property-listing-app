@@ -1,50 +1,57 @@
-# Welcome to your Expo app 👋
+# My PropertyListing App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This is a sample property listing mobile app built using **Expo**, **TypeScript**, and **React Native**. It showcases basic app features including a property list, booking system, profile screen, and API integration via JSON-server.
 
-## Get started
+---
 
-1. Install dependencies
+## 📱 Features
 
-   ```bash
-   npm install
-   ```
+- Property list with a search bar
+- Property detail screen with map and feature list
+- Book a property (local JSON server)
+- View bookings
+- Bottom tab navigation: Home, Bookings, Profile
+- State management with **Zustand** and **Jotai**
+- Styling with **twrnc (NativeWind)**
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+## 🚀 How to Run the App
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+### 1. Clone the repo
 
 ```bash
-npm run reset-project
-```
+git clone https://github.com/your-username/my-rental-app.git
+cd my-rental-app
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+ 1. Clone the repo
+npm install
 
-## Learn more
+2. Install dependencies
+npm install
 
-To learn more about developing your project with Expo, look at the following resources:
+3. Start JSON Server
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+npx json-server --watch db.json --port 3001
 
-## Join the community
 
-Join our community of developers creating universal apps.
+Make sure your Android emulator or device is on the same network and replace API URL with your local IP, currently in constant/index.ts to run in emulator uncomment the code.
+http://10.0.2.2:3001
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+4. Start the Expo app
+npm start
+Press a to launch the app in Android emulator or npm run android .
+
+🤖 Running on Android Emulator
+Make sure Android Studio Emulator is open and running.
+
+Use npm start (or npx expo start) and press a in the CLI.
+
+If you face issues with API not fetching on emulator, try:
+
+Use your local machine's IP address in API base URL (http://192.168.1.X:3001)
+
+Avoid using localhost or 127.0.0.1 — those refer to the emulator itself, not your machine.
+
+The app assumes a local development setup with a running JSON-server.
